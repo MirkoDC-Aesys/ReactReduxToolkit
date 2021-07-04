@@ -14,7 +14,9 @@ code {
 
 section {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 10px;
   text-align: center;
+  border: 1px solid #000;
+  border-radius: 10px;
 }
