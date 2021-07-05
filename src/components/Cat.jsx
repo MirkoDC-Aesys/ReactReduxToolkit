@@ -3,7 +3,7 @@ import Button from './Button'
 import styles from './Cat.module.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { catSelector } from '../slices/cat'
-import { getCatImg } from '../slices/cat'
+import { getCatSaga } from '../slices/cat'
 
 export default function Cat() {
     const dispatch = useDispatch()
@@ -11,7 +11,7 @@ export default function Cat() {
 
     return (
         <section>
-            <Button onClick={() => dispatch(getCatImg())}>Cat</Button>
+            <Button onClick={() => dispatch(getCatSaga())}>Cat</Button>
             <div>
                 <img className={styles.cat} src={cat} alt="" />
             </div>
