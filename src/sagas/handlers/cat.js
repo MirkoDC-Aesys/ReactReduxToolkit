@@ -1,5 +1,5 @@
 import { call, put } from "redux-saga/effects"
-import { getCatSagaFulfilled, getCatLoading } from '../../slices/cat'
+import { getCatSagaFulfilled, getCatLoading, getCatRejected } from '../../slices/cat'
 import { getCat } from '../../api/api'
 
 export function* handleGetCat() {
@@ -10,5 +10,6 @@ export function* handleGetCat() {
         yield put(getCatSagaFulfilled(url))
     } catch (error) {
         console.log(error)
+        yield put(getCatRejected())
     }
 }
