@@ -14,7 +14,9 @@ export const getCatImg = createAsyncThunk(
 const catSlice = createSlice({
     name: 'cat',
     initialState,
-    reducers:{},
+    reducers:{
+        getCatSaga: {}
+    },
     extraReducers: builder => {
         builder.addCase(getCatImg.pending, (state) => {
             return state = 'https://media1.tenor.com/images/8f7a28e62f8242b264c8a39ba8bea261/tenor.gif?itemid=15922897'
@@ -28,5 +30,6 @@ const catSlice = createSlice({
     }
 })
 
+export const { getCatSaga } = catSlice.actions
 export const catSelector = state => state.cat
 export default catSlice.reducer
